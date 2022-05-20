@@ -1,0 +1,124 @@
+/* General Styling */
+body {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+}
+
+/* Text Style Edit */
+p {
+  margin: 0;
+}
+.display-1 {
+  font-weight: 900;
+}
+
+/* Searchbox Styling */
+.search-wrapper {
+  margin: 50px;
+}
+#search-form {
+  position: relative;
+  box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
+  border-radius: 100px;
+}
+
+#search-form input {
+  height: 60px;
+  text-indent: 25px;
+  border: 2px solid #dee2e5;
+  border-radius: 100px;
+}
+
+#search-form input:focus {
+  box-shadow: none;
+  border: 2px solid #0d32a0;
+  border-radius: 100px;
+}
+
+#search-form .fa-location-dot {
+  position: absolute;
+  top: 23px;
+  left: 20px;
+}
+
+#search-form button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 50px;
+  width: 110px;
+  background: #0d32a0;
+  border-radius: 100px;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #520dc1;
+  border-color: #520dc1;
+}
+
+.form-control {
+  font-size: 20px;
+}
+/* Current Weather Styling */
+p.date-text {
+  margin-bottom: 10px;
+  color: #6c757d;
+}
+h1.display-1 {
+  font-size: 110px;
+  color: #0d32a0;
+}
+#weatherIcon {
+  color: #6c757d;
+}
+
+#degC {
+  text-decoration: none;
+}
+#degF {
+  text-decoration: none;
+}
+#title {
+  color: #0d32a0;
+}
+#date {
+  color: #6c757d;
+}
+#time {
+  color: #6c757d;
+}
+
+/* Toggle */
+.form-switch .form-check-input:checked {
+  background-color: #0d32a0;
+}
+
+/* Hourly Trend */
+.chart {
+  margin-top: 100px;
+}
+
+#my-chart.area {
+  height: 100px;
+  margin: 0 auto;
+  --color: linear-gradient(#fff, #0d32a0);
+}
+
+/* Daily */
+.daily {
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 50px;
+  background: linear-gradient(145deg, rgb(13, 50, 160) 20%, rgb(8, 22, 6) 150%);
+}
+
+p {
+  color: #fff;
+}
+
+h2 {
+  color: #fff;
+}

@@ -1,6 +1,6 @@
 // Format Date
 function formatDate(timestamp) {
-  let date = new Date(timestamp);
+  let date = new Date(timestamp * 1000);
   // Format Day of Week
   let days = [
     "Sunday",
@@ -12,7 +12,6 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let wkDay = days[date.getDay()];
-
   // Format Months
   let months = [
     "Jan",
@@ -29,13 +28,13 @@ function formatDate(timestamp) {
     "Dec",
   ];
   let month = months[date.getMonth()];
-
   // Format Day of Month
   let dayOfMonth = date.getDate();
   // Display Result
   return `${wkDay} ${month} ${dayOfMonth}`;
 }
-// Display the temperature
+
+// Display Real Data
 function displayData(response) {
   // Reference Data
   console.log(response.data);

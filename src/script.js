@@ -1,4 +1,4 @@
-// Format Date
+// FORMAT DATE
 function formatDate(timestamp) {
   let date = new Date(timestamp * 1000);
   // Format Day of Week
@@ -34,7 +34,21 @@ function formatDate(timestamp) {
   return `${wkDay} ${month} ${dayOfMonth}`;
 }
 
-// Display Real Data
+// FORMAT TIME
+function formatTime(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+
+// DISPLAY REAL DATA
 function displayData(response) {
   // Reference Data
   console.log(response.data);
@@ -54,6 +68,10 @@ function displayData(response) {
   // Date
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.dt);
+
+  // Time
+  let timeElement = document.querySelector("#time");
+  timeElement.innerHTML = formatTime(response.data.dt);
 }
 // Get the API KEY & API URL
 let apiKey = "abc5d83b930b4cfc5fadea2d9d454df8";

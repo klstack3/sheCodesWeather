@@ -84,6 +84,9 @@ h1.display-1 {
 #title {
   color: #0d32a0;
 }
+#weatherDesc {
+  text-transform: capitalize;
+}
 #date {
   color: #6c757d;
 }

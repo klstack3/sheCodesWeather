@@ -72,10 +72,19 @@ function displayData(response) {
   // Time
   let timeElement = document.querySelector("#time");
   timeElement.innerHTML = formatTime(response.data.dt * 1000);
+
+  // Icon
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 // Get the API KEY & API URL
 let apiKey = "abc5d83b930b4cfc5fadea2d9d454df8";
-let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=Milan&appid=${apiKey}&units=metric`;
+let city = "Rio";
+let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiURL).then(displayData);

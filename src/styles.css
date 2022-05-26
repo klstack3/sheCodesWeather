@@ -71,8 +71,9 @@ h1.display-1 {
   font-size: 110px;
   color: #0d32a0;
 }
-#weatherIcon {
+#icon {
   color: #6c757d;
+  max-width: 50px;
 }
 
 #degC {

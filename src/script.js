@@ -36,12 +36,12 @@ function formatDate(timestamp) {
 
 // FORMAT TIME
 function formatTime(timestamp) {
-  let date = new Date(timestamp);
-  let hours = date.getHours();
+  let time = new Date(timestamp);
+  let hours = time.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = date.getMinutes();
+  let minutes = time.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -71,10 +71,11 @@ function displayData(response) {
 
   // Time
   let timeElement = document.querySelector("#time");
-  timeElement.innerHTML = formatTime(response.data.dt);
+  timeElement.innerHTML = formatTime(response.data.dt * 1000);
 }
+
 // Get the API KEY & API URL
 let apiKey = "abc5d83b930b4cfc5fadea2d9d454df8";
-let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=${apiKey}&units=metric`;
+let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=Milan&appid=${apiKey}&units=metric`;
 
 axios.get(apiURL).then(displayData);

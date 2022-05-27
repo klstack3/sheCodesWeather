@@ -107,13 +107,16 @@ h1.display-1 {
 #time {
   color: #6c757d;
 }
+#wind {
+  color: #6c757d;
+}
 
 /* Toggle */
 .form-switch .form-check-input:checked {
   background-color: #0d32a0;
 }
 
-/* Hourly Trend */
+/* Hourly Trend
 .chart {
   margin-top: 100px;
 }
@@ -122,7 +125,7 @@ h1.display-1 {
   height: 100px;
   margin: 0 auto;
   --color: linear-gradient(#fff, #0d32a0);
-}
+} */
 
 /* Daily */
 .daily {

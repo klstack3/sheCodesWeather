@@ -74,6 +74,10 @@ function displayData(response) {
   let timeElement = document.querySelector("#time");
   timeElement.innerHTML = formatTime(response.data.dt * 1000);
 
+  // Wind
+  let windElement = document.querySelector("#windSpeed");
+  windElement.innerHTML = response.data.wind.speed;
+
   // Icon
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(

@@ -16,7 +16,7 @@ p {
 
 /* Searchbox Styling */
 .search-wrapper {
-  margin: 50px;
+  margin: 50px 50px 15px 50px;
 }
 #search-form {
   position: relative;
@@ -63,6 +63,9 @@ p {
   font-size: 20px;
 }
 /* Current Weather Styling */
+.current {
+  margin-bottom: 50px;
+}
 p.date-text {
   margin-bottom: 10px;
   color: #6c757d;

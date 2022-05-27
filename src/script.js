@@ -82,9 +82,21 @@ function displayData(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-// Get the API KEY & API URL
-let apiKey = "abc5d83b930b4cfc5fadea2d9d454df8";
-let city = "Rio";
-let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+// Search Logic
 
-axios.get(apiURL).then(displayData);
+function searchCity(city) {
+  let apiKey = "abc5d83b930b4cfc5fadea2d9d454df8";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayData);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#searchInput").value;
+  searchCity(city);
+}
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+
+searchCity("Milan");

@@ -133,4 +133,4 @@ fLink.addEventListener("click", displayF);
 let cLink = document.querySelector("#degC");
 cLink.addEventListener("click", displayC);
 
-searchCity("Milan");
+searchCity("Toronto");

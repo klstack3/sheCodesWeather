@@ -63,6 +63,15 @@ p {
   font-size: 20px;
 }
 /* Current Weather Styling */
+a.active {
+  color: black;
+  cursor: default;
+}
+
+a.active:hover {
+  text-decoration: none;
+}
+
 .current {
   margin-bottom: 50px;
 }

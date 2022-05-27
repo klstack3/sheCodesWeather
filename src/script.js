@@ -55,7 +55,8 @@ function displayData(response) {
 
   // Temperature
   let temperatureElement = document.querySelector("#tempValue");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cTemp = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round(cTemp);
 
   // City
   let cityElement = document.querySelector("#cityTitle");
@@ -96,7 +97,36 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+// TOGGLE F/C
+function displayF(event) {
+  event.preventDefault();
+  let tfTemp = (cTemp * 9) / 5 + 32;
+  cLink.classList.remove("active");
+  fLink.classList.add("active");
+  let temperatureElement = document.querySelector("#tempValue");
+  temperatureElement.innerHTML = Math.round(tfTemp);
+}
+
+function displayC(event) {
+  event.preventDefault();
+  let tcTemp = cTemp;
+  fLink.classList.remove("active");
+  cLink.classList.add("active");
+  let temperatureElement = document.querySelector("#tempValue");
+  temperatureElement.innerHTML = Math.round(tcTemp);
+}
+
+// GLOBAL VARIABLES
+
+let cTemp = null;
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
+
+let fLink = document.querySelector("#degF");
+fLink.addEventListener("click", displayF);
+
+let cLink = document.querySelector("#degC");
+cLink.addEventListener("click", displayC);
 
 searchCity("Milan");

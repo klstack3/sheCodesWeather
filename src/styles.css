@@ -66,6 +66,7 @@ p {
 a.active {
   color: black;
   cursor: default;
+  font-weight: 600;
 }
 
 a.active:hover {

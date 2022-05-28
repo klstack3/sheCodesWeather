@@ -48,6 +48,35 @@ function formatTime(timestamp) {
   return `${hours}:${minutes}`;
 }
 
+// DISPLAY FORECAST MODULE
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col text-center">
+        <p class="forecast-date">${day}</p>
+        <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="50"></img>
+        <div class="forecast-temeratures">
+            <p>
+                <span id="min-temp">11 </span>/
+                <span id="max-temp"><strong>12°C</strong></span>
+            </p>
+        </div>
+     </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
+
 // DISPLAY REAL DATA
 function displayData(response) {
   // Reference Data

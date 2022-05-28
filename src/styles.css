@@ -110,6 +110,9 @@ h1.display-1 {
 #wind {
   color: #6c757d;
 }
+#celsius {
+  color: #6c757d;
+}
 
 /* Toggle */
 .form-switch .form-check-input:checked {

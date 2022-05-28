@@ -97,7 +97,7 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
-// DISPLAY REAL DATA
+// DISPLAY REAL WEATHER DATA
 function displayData(response) {
   // Reference Data
   console.log(response.data);
@@ -138,7 +138,7 @@ function displayData(response) {
   getForecast(response.data.coord);
 }
 
-// Search Logic
+// SEARCH LOGIC
 
 function searchCity(city) {
   let apiKey = "abc5d83b930b4cfc5fadea2d9d454df8";
@@ -152,36 +152,36 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
-// TOGGLE F/C
-function displayF(event) {
-  event.preventDefault();
-  let tfTemp = (cTemp * 9) / 5 + 32;
-  cLink.classList.remove("active");
-  fLink.classList.add("active");
-  let temperatureElement = document.querySelector("#tempValue");
-  temperatureElement.innerHTML = Math.round(tfTemp);
-}
+// // TOGGLE F/C
+// function displayF(event) {
+//   event.preventDefault();
+//   let tfTemp = (cTemp * 9) / 5 + 32;
+//   cLink.classList.remove("active");
+//   fLink.classList.add("active");
+//   let temperatureElement = document.querySelector("#tempValue");
+//   temperatureElement.innerHTML = Math.round(tfTemp);
+// }
 
-function displayC(event) {
-  event.preventDefault();
-  let tcTemp = cTemp;
-  fLink.classList.remove("active");
-  cLink.classList.add("active");
-  let temperatureElement = document.querySelector("#tempValue");
-  temperatureElement.innerHTML = Math.round(tcTemp);
-}
+// function displayC(event) {
+//   event.preventDefault();
+//   let tcTemp = cTemp;
+//   fLink.classList.remove("active");
+//   cLink.classList.add("active");
+//   let temperatureElement = document.querySelector("#tempValue");
+//   temperatureElement.innerHTML = Math.round(tcTemp);
+// }
 
 // GLOBAL VARIABLES
 
-let cTemp = null;
+//let cTemp = null;
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-let fLink = document.querySelector("#degF");
-fLink.addEventListener("click", displayF);
+// let fLink = document.querySelector("#degF");
+// fLink.addEventListener("click", displayF);
 
-let cLink = document.querySelector("#degC");
-cLink.addEventListener("click", displayC);
+// let cLink = document.querySelector("#degC");
+// cLink.addEventListener("click", displayC);
 
 searchCity("Toronto");

@@ -80,9 +80,14 @@ p.date-text {
   margin-bottom: 10px;
   color: #6c757d;
 }
-h1.display-1 {
+.display-1 {
   font-size: 110px;
   color: #0d32a0;
+}
+#units {
+  position: relative;
+  font-size: 20px;
+  top: -60px;
 }
 #icon {
   color: #6c757d;

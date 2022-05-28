@@ -184,4 +184,4 @@ searchForm.addEventListener("submit", handleSubmit);
 // let cLink = document.querySelector("#degC");
 // cLink.addEventListener("click", displayC);
 
-searchCity("Toronto");
+searchCity("Kristen");
